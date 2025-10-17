@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   
+    int arr[9] = {9,8,7,6,5,4,3,2,1};
+    int target = 6;
+    
+    int l = 0, r = 7;
+    
+    while(l<=r){
+        int m = (l+r)/2;
+        
+        if(arr[m] == target){
+            cout << "Element Found at Index : " << m;
+            break;
+        }
+        else if(arr[m] < target){
+            l = m + 1;
+        }
+        else {
+            r = m - 1;
+        }
+    }
+    
+    return 0;
+}

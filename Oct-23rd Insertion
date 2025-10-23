@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5] = {3, 1, 2, 4, 5};
+    int n = 5;
+    int position = 2;
+    int value = 21;
+    
+    int brr[n + 1];
+    int i;
+
+    for (i = 0; i < position; i++) {
+        brr[i] = arr[i];
+    }
+
+    brr[i] = value;
+
+    for (int j = position; j < n; j++) {
+        brr[j + 1] = arr[j];
+    }
+
+    for (int j = 0; j < n + 1; j++) {
+        cout << brr[j] << " ";
+    }
+
+    return 0;
+}

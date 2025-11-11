@@ -1,0 +1,80 @@
+#include <iostream>
+using namespace std;
+
+class stack{
+    public :
+    int arr[100];
+    int top;
+    
+    stack() {
+        top = -1;
+    }
+    
+    void push(int value){
+        if (top == 100){
+            cout << "Stack is Full/OverFlow";
+        }
+        else{
+            top++;
+        }
+    }
+    
+    void pop(){
+        if(top = -1){
+            cout << "Stack is Empty/UnderFlow" << endl;
+        }
+        else{
+            top--;
+        }
+    }
+    
+    bool isEmpty(){
+        // if(top == -1){
+        //     return true;
+        // }
+        // else return false;
+        
+        return top == -1
+    }
+    
+    int peek(){
+        if(top == -1){
+            return -1;
+        }
+        return arr[top];
+    }
+    
+    void traversal(){
+        for(int i = top; i > 0; i++){
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+    }
+};
+
+int main() {
+    
+    Stack st;
+    st.push(100);
+    st.push(150);
+    st.push(160);
+    st.push(20);
+    
+    st.traversal();
+    st.pop();
+    st.pop();
+    st.pop();
+    st.pop();
+    st.push(-100);
+    st.pop();
+    
+    
+    st.traversal();
+    
+    int val = st.peek();
+    cout << val;
+    cout << endl;
+    
+    
+    return 0;
+}

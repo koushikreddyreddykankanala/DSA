@@ -34,7 +34,7 @@ class stack{
         // }
         // else return false;
         
-        return top == -1
+        return top == -1;
     }
     
     int peek(){
@@ -44,8 +44,13 @@ class stack{
         return arr[top];
     }
     
-    void traversal(){
-        for(int i = top; i > 0; i++){
+    void traversal() {
+        if (top == -1) {
+            cout << "Stack is Empty" << endl;
+            return;
+        }
+        cout << "Stack elements: ";
+        for (int i = top; i >= 0; i--) {
             cout << arr[i] << " ";
         }
         cout << endl;
@@ -54,7 +59,7 @@ class stack{
 
 int main() {
     
-    Stack st;
+    stack st;
     st.push(100);
     st.push(150);
     st.push(160);

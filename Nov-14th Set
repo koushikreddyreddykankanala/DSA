@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    vector<int>vec ={1,1,1,2,3,2,3,1,1,2,4,2,4,2,4,5,3,3};
+    
+    // for unordered set
+    // unordered_set<int>st;
+    
+    // for ordered set
+    set<int>st;
+    
+    for(auto& x : vec){
+        st.insert(x);
+    }
+    
+    // cout << st.size();
+    st.erase(5);
+
+    for(auto& x : st){
+        cout << x << " ";
+    }
+    
+    cout << endl;
+    cout << st.size();
+    
+    return 0;
+}

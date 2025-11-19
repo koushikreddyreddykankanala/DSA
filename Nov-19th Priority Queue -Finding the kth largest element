@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    
+    vector<int> vec = {2,3,4,2,1,4,6};
+    priority_queue<int, vector<int>,greater<int>>pq;
+    int k = 4;
+    
+    for(auto& x : vec){
+        pq.push(x);
+        if(pq.size() > k)pq.pop();
+    }
+    
+    cout << pq.top();
+    
+    return 0;
+}
